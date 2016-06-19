@@ -1,0 +1,280 @@
+*{margin:0;padding:0;}
+element.style {
+    display: block;
+}
+ html,body{
+	height: 100%;
+}
+.wrapper{
+	height:100%;/*一个对象高度是否可以使用百分比显示，取决于对象的父级对象，wrapper在body之中，
+	因此它的父级是body，而浏览器默认状态下，是没有给body一个高度属性的，因此当我们直接设置#left
+	为height:100%;时，不会产生任何效果，而当我们给body设置了100%之后，它的子级对象Table的height:100%;
+	便发生作用了，这便是浏览器解析规则引发的高度自适应问题。给 HTML对象也应用相同的样式设计，这样做的
+	处是使IE与firefox浏览器能够实现高度自适应。另外,Firefox中的HTML标签不是 100%高度，因此给两个标签
+	都定义为height:100%;以保证两个浏览器下均能够正常*/
+	min-height: 600px;
+    min-width: 810px;
+	position: relative;
+ }
+/*导航栏样式*/
+.navigation{
+	width: 510px;
+	margin:19px 0 5px 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+.navigation a.mav:link,.navigation a.mav:visited{/*未访问、已访问样式*/
+	float:left;
+	color:#000000;
+	font-size:13px;
+	font-weight: bold;
+	line-height:24px;
+	margin:0 0 0 20px;
+	text-decoration:underline;
+}
+.navigation a:hover{
+	color:#9400D3;
+}
+.navigation a.log_in:link,.navigation a.log_in:visited,.navigation a.set:link,.navigation a.set:visited,
+.navigation a.moreproduct:link,.navigation a.moreproduct:visited{/*a标签样式未访问和已访问*/
+	float:left;
+	color:#000;
+	font-size:13px;
+	line-height:24px;
+	margin:0 0 0 20px;
+	text-decoration:underline;
+}
+#set_boxx{/*设置边框样式*/
+	width: 75px;top: 20px;
+	text-align: center;
+	border: 1px solid #dfd8d8;
+	box-shadow: 2px 2px 1px #efebeb;/*阴影*/
+}
+#set_boxx,#moreproduct_boxx{
+	position: absolute;
+	z-index: 1;
+}
+#set_boxx #triangle{
+	display: block;
+	width: 0;height: 0;
+	position: absolute;
+	left: 50%;
+	top: -10px;
+	z-index: 2;
+}
+#set_boxx #triangle #triangle1{/*尖角三角形样式*/
+	position: absolute;
+	left: 50%;width: 0;height: 0;
+	z-index: 3;
+	margin-left: -10px;
+	border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid
+	 #dfd8d8;box-sizing: border-box;
+}
+#set_boxx #triangle #triangle2{
+	position: absolute;left: 50%;z-index: 4; top:1px;margin-left: -9px;border-left: 9px solid transparent;
+	border-right: 9px solid transparent;border-bottom: 10px solid #fff;box-sizing: border-box;
+}
+#set_boxx li a{/*设置字体大小*/
+	font-size: 14px;
+	font-family: verdana,sans-serif;line-height: 24px;
+}
+#set_boxx li,#moreproduct_boxx li{/*设置、更多产品隐藏部分*/
+	list-style-type: none;/*去掉项目编号*/
+}
+#set_boxx a{
+	display: block;
+	list-style: none;
+	text-decoration: none;
+	color: #000;
+}
+#set_boxx li a:hover{
+	background-color: #3388FF;
+}
+#moreproduct_boxx {
+	width: 85px;
+	display: inline-block;
+	font-size: 12px;
+	font-family: verdana,sans-serif;
+	margin: 0 5px;text-align: center;
+	background: #f9f9f9;
+}
+#moreproduct_boxx p{
+	display: inline-block;
+	width: 70px;
+	padding: 19px 0 18px 0;
+	letter-spacing: 2px;
+	text-align: center;
+	border-bottom: 1px solid #f0f0f0;
+}
+#moreproduct_boxx ul li{
+	height: 50px;width: 70px;
+	display: inline-block;
+	padding: 15px 0 12px 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+#moreproduct_boxx ul li a{
+	display: block;
+	list-style: none;
+	color: #000;
+}
+#moreproduct_boxx ul li a.hover{
+	text-decoration: underline;
+}
+#moreproduct_boxx img{/*图片位置*/
+	display: block;
+	width: 45px;height: 30px;
+	text-align: center;
+	margin:0 auto ;
+}
+#moreproduct_boxx ul li a.allp{font-size: 12px;letter-spacing: 0;text-decoration:underline;}
+#more_i{
+	width: 85px;
+	background: #f9f9f9;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	z-index: 2;
+	border: 1px solid #f9f9f9;
+}
+/*导航栏样式结束*/
+
+
+/*开始中间搜索和logo部分*/
+.main{/*整个中间部分的相对定位*/
+	position: relative;
+	top:120px;
+	text-align: center;
+	margin: 0 auto;
+}
+.main img{
+	margin-bottom: 45px;
+}
+#fr{
+	position: relative;
+	width: 641px;
+}
+#fr .input_box{
+	border-width: 1px 0 1px 1px;
+	border-color: hsl(0, 0%, 72%) hsla(0, 0%, 0%, 0) hsl(0, 0%, 80%) hsl(0, 0%, 72%);
+	margin-right: 0;
+}
+.search_input{
+	width:540px;
+	height: 38px;
+	padding-left: 5px;
+	line-height:22px;
+	font-size:18px;
+}
+.submit{
+	position: relative;
+	left: -10px;
+	width:100px;
+	height: 38px;
+	line-height: 36px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: #fff;
+	background:rgb(49,126,243);
+	border: none;
+	outline: none;
+}/*结束中间搜索和logo部分*/
+
+
+/*开始底部样式*/
+.foot_wrapper{/*大包裹层*/
+	bottom: 25px;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    z-index: 0;
+    font-size: 14px;
+
+}	
+.foot_wrapper .foot_center{/*第二个包裹层*/
+	/*position：absolute不能和text-align同时使用，进行再次包裹居中*/
+	margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}	
+.foot_wrapper .foot_center .iqcore{
+	display: inline-block;/*绝对定位是脱离文档流，inline-block不脱离文档流,才能做浮动*/
+	color: hsl(0, 0%, 60%);/*字体颜色变淡*/
+}
+.foot_wrapper .foot_center .item{
+	float: left;
+	margin: 0 40px 0 0;/*两个二维码盒子的外边距*/
+}		
+.foot_wrapper .foot_center .item img{
+	float: left;
+	width: 60px;
+	height: 60px;
+}	
+.foot_wrapper .foot_center .foot_wrapper_text{
+	float: left;/*浮动让文字居于图片的左边*/
+	line-height: 24px;
+    margin: 8px 0 0 10px;
+}	
+.foot_wrapper .foot_center .item .foot_wrapper_text b{
+	font-weight: bold;/*<b> 标签定义粗体的文本,设置样式浏览器兼容*/
+}
+.foot_wrapper .foot_center .item span{
+	letter-spacing: 1px;/*字符距离为px*/
+}	
+.safety_information{
+	display: inline-block;/*嵌入文档流，使之位于前一个盒子的右边*/
+	position: relative;
+	text-align: left;/*让居中的文字向左靠齐*/
+	top: -2px;
+	font-size: 14px;
+	line-height: 23px;
+	color: hsl(0, 0%, 60%);/*字体颜色变淡*/
+}											
+.safety_information a{
+	color: hsl(0, 0%, 60%);/*字体颜色变淡*/
+}	
+#lt a{
+	margin-left: 60px;/*第一排<p>的间隔距离*/
+}	
+#lt  a.lt_first_kid{
+	margin-left: 0;
+}	
+#icon_logo,#icon_logo_1{
+    display: inline-block;
+    position: relative;
+	top: 3px;
+    height: 17px;
+    overflow: hidden;
+    width: 14px;
+}
+/*搜索框提示*/
+#searchset{
+	position: absolute;
+	width: 358px;
+	border: 1px solid #999;
+	max-height: 144px;
+	background:#fff; 
+	overflow: hidden;
+}
+#searchset ul{
+	list-style: none;
+}
+#searchset li{
+	list-style-type: none;/*去掉项目编号*/
+	padding-left: 5px;
+	line-height: 36px;
+	font-size: 18px;
+}
+#searchset li:hover{
+	background: #e5e5e5;
+}
+#searchset li a{
+	display: block;
+	list-style: none;
+	text-decoration: none;
+	color: #000;
+}

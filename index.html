@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compation" content="IE=edge" />
+<meta http-equiv="Access-Control-Allow-Origin" content="http://api.bing.com">
+<!--saved from url=(0014)about:internet-->
+<title>baidu_search</title>  
+<link rel="stylesheet" type="text/css" href="css/css.css" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="C:\网站学习\baidu_search\js\html5shiv.js"></script>
+<script type="text/javascript" src="C:\网站学习\baidu_search\js\html5shiv-printshiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<div class="navigation-wrapper">
+			<nav class="navigation" ><!--导航栏-->
+				<a class="mav" href="http://www.nuomi.com/?cid=002540" target="_blank" >糯米</a>
+				<a class="mav" href="http://news.baidu.com" target="_blank">新闻</a>
+				<a class="mav" href="http://www.hao123.com" target="_blank">hao123</a>
+				<a class="mav" href="http://map.baidu.com" target="_blank">地图</a>
+				<a class="mav" href="http://v.baidu.com" target="_blank">视频</a>
+				<a class="mav" href="http://tieba.baidu.com" target="_blank">贴吧</a>
+				<a class="log_in" href="#">登录</a>
+				<a class="set" id='set_i' href="http://www.baidu.com/gaoji/preferences.html">设置</a>
+				<a class="moreproduct"  id='moreproduct_i' href="http://www.baidu.com/more/" style="background: rgb(51,136,255);text-decoration:none;color: #fff;letter-spacing: 2px; display: block;">更多产品</a>
+			</nav>
+		</div>
+		<div class="set_box" id="set_boxx" style="display: none;"><!--设置框-->
+			<div id="triangle">
+				<i id="triangle1"></i><em id="triangle2"></em>
+			</div>
+			<ul class="set-box1">
+				<li><a class="setpref" href="javascript:;">搜索设置</a></li>
+				<li><a href="//www.baidu.com/gaoji/advanced.html">高级搜索</a></li>
+				<li><a href="javascript:;">关闭预测</a></li>
+				<li><a href="javascript:;">搜索历史</a></li>
+			</ul>
+		</div>
+		<div id="more_i" style="display: none;">
+			<div class="moreproduct_box" id="moreproduct_boxx"><!--更多产品-->
+				<p>更多产品</p>
+				<ul class="moreproduct_box1">
+					<li><a href="http://music.baidu.com"><img src="images/baidu_search_01.png" />音乐</a></li>
+					<li><a href="http://image.baidu.com"><img src="images/baidu_search_02.png" />图片</a></li>
+					<li><a href="http://zhidao.baidu.com"><img src="images/baidu_search_04.png" />知道</a></li>
+					<li><a href="http://wenku.baidu.com"><img src="images/baidu_search_05.png" />文库</a></li>
+					<li><a href="http://top.baidu.com"><img src="images/baidu_search_06.png" />风云榜</a></li>
+					<li><a href="http://e.baidu.com/?refer=888"><img src="images/baidu_search_08.png" />百度推广</a></li>
+					<li><a href="//www.baidu.com/more/" id="allp">全部产品&gt;&gt;</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--中间搜索和logo部分-->
+		<div class="main">
+			<div><img src="images/baidu_search_03.png" alt="百度logo" width="240px"></div>
+			<from id="fr" class="fm" action="/s" name="f">
+				<span class ="input_box"><input class="search_input" id="searchinput" type="search" maxlength="255" placeholder="请输入搜索内容" /></span>
+				<input class="submit" type="submit" value ="百度一下" /> 
+			</from>
+		</div>
+		<!--页脚部分-->
+		<div class="foot_wrapper">
+			<div class="foot_center"><!--再次包裹底部标签，方便定位底部和text-align:center-->
+				<div class="iqcore">
+					<div class="phonebaidu item">
+						<img src="images/baidu_search_07.png" >
+						<div class="foot_wrapper_text">
+							<p><b>手机百度</b></p>
+							<p><span>快人一步</span></p>
+						</div>
+					</div>
+					<div class="baidurice item">
+						<img src="images/baidu_search_09.png">
+						<div class="foot_wrapper_text">
+							<p><b>百度糯米</b></p>
+							<p><span>一元大餐</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="safety_information">
+					<p id="lt">
+						<span><a class="lt_first_kid" href="//www.baidu.com/cache/sethelp">把百度设为首页</a></span>
+						<span><a href="http://home.baidu.com">关于百度</a></span>
+						<span><a href="http://ir.baidu.com">about Baidu</a></span>
+					</p>
+					<p><!--<p>标签里，一个换行相当于一个空格-->
+						@2016 Baidu
+						<a href="http://www.baidu.com/duty/">使用百度前必读</a>
+						<a href="http://jianyi.baidu.com/">意见反馈</a>
+						京ICP证030173号<img id="icon_logo" src="images/baidu_search_10.png" />
+					</p>
+					<p>
+						<img id="icon_logo_1" src="images/baidu_search_11.png"/>
+						京公网安备11000002000001号
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="searchset" style="display: none;"><!--搜索框下拉菜单-->
+		<ul id="searchli">
+			<li><a href="#">woghdjgdhjghj</a></li>
+			<li><a href="#">woghdjgdhjghj01</a></li>
+		</ul>
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
